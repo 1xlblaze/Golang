@@ -1,1 +1,1 @@
-This repo carris golang POC.
+This repo carries golang POC.
