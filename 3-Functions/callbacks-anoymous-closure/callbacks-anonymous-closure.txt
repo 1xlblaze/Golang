@@ -1,0 +1,6 @@
+- Anonymous : An anonymous function is a function that is defined without a name. 
+                       It is typically used for short, simple pieces of logic where a full named function would be unnecessary. In Go, anonymous functions can be defined inline, and they can also be immediately invoked.
+- closures : A closure is a special type of function (which can be an anonymous or named function) that "captures" variables from its surrounding scope. 
+                       Closures allow the function to access and manipulate variables that were in scope when the function was created, even after those variables go out of scope.
+- Callbacks :  A callback is a function that is passed as an argument to another function. 
+                       The receiving function can then call (or "invoke") this function during its execution. A callback function can be either anonymous or named  
