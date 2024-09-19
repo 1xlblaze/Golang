@@ -1,0 +1,13 @@
+1. Uninitialized variables are given its zero value (e.g int = 0, string = "", bool = false)
+2. Every thing is passed by value except arrays, slices, maps and channels which some calls reference types, these types are passed by reference ( they internally have pointers, so no copying of the actual data happens when passing them) .
+3. Unlike in C, it's perfectly OK to return the address of a local variable; the storage associated with the variable survives after the function returns.
+4. Anonymous vs callbacks vs closures function
+         - Anonymous : An anonymous function is a function that is defined without a name. 
+                       It is typically used for short, simple pieces of logic where a full named function would be unnecessary. In Go, anonymous functions can be defined inline, and they can also be immediately invoked.
+         - closures : A closure is a special type of function (which can be an anonymous or named function) that "captures" variables from its surrounding scope. 
+                       Closures allow the function to access and manipulate variables that were in scope when the function was created, even after those variables go out of scope.
+         - Callbacks :  A callback is a function that is passed as an argument to another function. 
+                       The receiving function can then call (or "invoke") this function during its execution. A callback function can be either anonymous or named  
+
+5.In Go, when you embed a struct inside another struct, the fields and methods of the embedded struct are promoted to the embedding struct.   
+                        
