@@ -1,0 +1,16 @@
+Receiver are used to link methods with the structure
+type student struct{
+    name string
+    roll int
+    city string
+}
+Value receiver - The method gets a copy of the struct. Any modifications made within the method will not affect the original struct.
+func (p student) getdetails() {
+    fmt.Printf("Student name: %s\n "roll no %d\n  city %s\n ", p.name, p.roll, p.city);
+}
+
+Pointer receiver - The method gets a reference (pointer) to the original struct, allowing the method to modify the original struct's fields.
+func (p *student) getdetails() {
+    p.roll = 94;
+    fmt.Printf("Student name: %s\n "roll no %d\n  city %s\n ", p.name, p.roll, p.city);
+}
