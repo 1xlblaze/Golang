@@ -33,4 +33,12 @@ go
 var i interface{} = "hello"
 n := i.(int) // Causes a panic because i is not an int
 
-e. Invalid memory access: Accessing memory in an invalid way, such as dereferencing a nil or uninitialized pointer, will cause the program to panic.
+e. Invalid memory access: Accessing memory in an invalid way, such as dereferencing a nil or uninitialized pointer, will cause the program to panic.\
+Build Time: panic does not typically occur during the build process itself. If an error is detected at build time, the build will fail but will not enter a restart loop unless triggered by external tools (e.g., CI systems with retry logic).
+
+Runtime:
+
+If no recover() is used, the application will crash due to a panic.
+Whether the application restarts depends on the environment (e.g., standalone, Kubernetes, systemd) and the restart policies configured for the deployment.
+
+Automatic Restart: Managed systems like Kubernetes, systemd, or process managers (e.g., supervisord) can restart the application after a panic, but this behavior is controlled by the deployment configuration.
