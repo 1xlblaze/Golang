@@ -1,0 +1,2 @@
+Unbuffered channels require both the sender and receiver to be ready at the same time, which can lead to blocking and potential deadlocks if not managed properly.
+Buffered channels allow for more flexibility by enabling sends without an immediate receive, thus reducing the risk of deadlocks.
