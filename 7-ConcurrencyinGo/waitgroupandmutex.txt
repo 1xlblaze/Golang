@@ -1,0 +1,3 @@
+Both WaitGroup and Mutex are passed by value in Go by default.
+To ensure that changes to a WaitGroup or Mutex inside a function or goroutine are reflected in the original instance, you must pass them by reference (i.e., by passing a pointer, *sync.WaitGroup or *sync.Mutex).
+For concurrency synchronization, it is critical to pass them by reference, especially when working with goroutines.
