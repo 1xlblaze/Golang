@@ -1,0 +1,4 @@
+Go prefers explicit error handling using the error type.
+Use error as a return type for functions, and always check for errors in the caller.
+You can create custom error types for more specific errors.
+For exceptional cases, panic and recover can be used, but their use is discouraged in regular code.

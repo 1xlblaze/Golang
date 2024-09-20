@@ -1,0 +1,36 @@
+Defer is Key: recover can only catch a panic when it is called inside a deferred function.
+Only Catches Active Panics: If there is no active panic, recover returns nil, and nothing happens.
+Use Case: Panic should only be used in critical error cases or in unexpected scenarios that you cannot handle through conventional error handling. For regular errors, Go encourages the use of error values instead of panics.
+Recover in Multiple Goroutines: If a panic occurs inside a goroutine, the deferred recover function must be in the same goroutine to capture that panic.
+
+----------------
+1. Runtime Errors (Implicit Panics)
+
+These are panics triggered by the Go runtime when your program encounters conditions that make it impossible to continue safely. Some common runtime errors include:
+
+a. Nil pointer dereference: Trying to access or assign to a nil pointer.
+
+var ptr *int
+*ptr = 10 // Causes a panic
+
+b. Array/slice out-of-bounds access: Accessing an element outside the valid range of an array or slice.
+
+
+arr := []int{1, 2, 3}
+fmt.Println(arr[5]) // Causes a panic
+
+c. Division by zero: Dividing an integer by zero.
+
+go
+
+x := 10
+fmt.Println(x / 0) // Causes a panic
+
+d. Type assertion failure: A failed type assertion when you attempt to assert that an interface holds a value of a particular type.
+
+go
+
+var i interface{} = "hello"
+n := i.(int) // Causes a panic because i is not an int
+
+e. Invalid memory access: Accessing memory in an invalid way, such as dereferencing a nil or uninitialized pointer, will cause the program to panic.
