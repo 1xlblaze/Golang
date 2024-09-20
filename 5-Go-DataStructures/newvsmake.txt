@@ -1,0 +1,17 @@
+new:
+Purpose: new is used to allocate memory for basic types like structs, arrays, and other composite types. It returns a pointer to the newly allocated memory, which is zero-initialized.
+Return Type: A pointer to the type specified.
+Usage: Typically used when you need a pointer to an instance of a type, but don't need to initialize the values beyond their zero values.
+
+make:
+Purpose: make is used to initialize and allocate memory for slices, maps, and channels only. It returns the value of the type, not a pointer.
+Return Type: The type itself (not a pointer).
+Usage: make is essential for creating slices, maps, and channels, as they need internal memory structures to be initialized (e.g., backing array for slices, hash tables for maps).
+
+
+map[string]int 
+if _,ok :map[string]; ok {
+    "key present in the map"
+} else {
+    "key not found"
+}

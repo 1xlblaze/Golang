@@ -1,0 +1,10 @@
+Arrays are of static size, size can't be changed in arrays.
+Arrays elements do not need to be initialized explicitly; the zero value of the type is the initial value.
+Slices are of dynamic size.  
+    numbers := []int{1, 2, 3, 4}
+    
+    /*  using make -> make([]T, len, cap) */
+    var s []byte
+    s = make([]byte, 5, 5)
+    //OR
+    s := make([]byte, 5)  // both equiavlent to: s == []byte{0, 0, 0, 0, 0}

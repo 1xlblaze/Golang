@@ -1,0 +1,9 @@
+Key OOP Concepts in Go:
+
+Structs: Like classes, they represent objects with data fields.
+Methods: Functions tied to a struct to represent behavior.
+Encapsulation: Controlled by export rules (capitalization).
+Composition over Inheritance: Embedding structs for reuse.
+Polymorphism: Achieved using interfaces.
+No constructors/destructors: But you can define constructor-like functions.
+No inheritance: But Go encourages composition.
