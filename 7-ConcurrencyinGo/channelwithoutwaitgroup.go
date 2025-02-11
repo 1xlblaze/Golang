@@ -27,8 +27,11 @@ func main() {
 			<-done
 		}
 		close(c)
+		//close(c)
 	}()
-
+	go func() {
+		close(c)
+	}()
 	for x := range c {
 		fmt.Println(x)
 	}

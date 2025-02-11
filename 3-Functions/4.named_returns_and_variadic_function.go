@@ -4,7 +4,10 @@ package main
 import "fmt"
 
 func main() {
-	x, y := split(9)
+	var x, y int
+	split(10)
+	println("Average:", x, y)
+	x, y = split(9)
 	avg := average(10, 20, 30, 40, 50)
 	println("Average:", avg)
 	fmt.Println(x, y)

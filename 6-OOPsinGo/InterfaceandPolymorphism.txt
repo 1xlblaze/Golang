@@ -1,0 +1,8 @@
+Interfaces in Go are a way to define behavior, not data. An interface is a type that specifies a set of method signatures but does not provide their implementation. Any type that provides implementations for these methods is said to "satisfy" the interface.
+
+Polymorphism using interfaces allows us to write code that can operate on different types in a uniform way, as long as those types satisfy a certain interface. This allows different types to be treated in the same way, which is the essence of polymorphism.
+Key Concepts:
+
+    Interface: Defines a set of methods but doesn't provide the implementation.
+    Polymorphism: Different types that satisfy the same interface can be used interchangeably.
+    Duck typing: In Go, you don’t explicitly declare that a type implements an interface (unlike in languages like Java). If a type has all the methods required by an interface, it "implements" that interface implicitly.
