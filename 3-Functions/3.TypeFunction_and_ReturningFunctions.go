@@ -44,3 +44,4 @@ func incrementy() int {
 	y++
 	return y
 }
+ // A closure in programming is an inner function that has access to the variables from its surrounding (outer) function's scope, even after the outer function has finished executing.
